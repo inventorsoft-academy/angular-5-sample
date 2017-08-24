@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainPageComponent } from './dashboard/main-page/main-page.component';
 import { SongsListComponent } from './dashboard/songs-list/songs-list.component';
@@ -44,7 +44,6 @@ const routes = [
         redirectTo: 'dashboard',
         pathMatch: 'full'
     }
-
 ];
 
 @NgModule({

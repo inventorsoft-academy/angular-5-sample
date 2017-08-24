@@ -12,21 +12,22 @@ export class HttpService {
 
     constructor(private http: Http) {
     }
+    
     getSongs(): Observable<Song[]> {
-        const url = 'songs/json';
-        return this.http.get(this.API + url)
+        const url = `${this.API}songs/json`;
+        return this.http.get(url)
                    .map(res => res.json());
     }
 
     findSongById(id): Observable<Song> {
-        const url = 'songs/';
-        return this.http.get(this.API + url + id)
+        const url = `${this.API}songs/${id}`;
+        return this.http.get(url)
                    .map(res => res.json());
     }
 
     saveSong(obj: {}): Observable<Response> {
-        const url = 'songs';
-        return this.http.post(this.API + url, obj);
+        const url = `${this.API}songs`;
+        return this.http.post(url, obj);
     }
 
 }
