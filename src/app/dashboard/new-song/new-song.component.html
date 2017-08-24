@@ -1,0 +1,12 @@
+<div class="container" style="width: 35%;">
+    <form [formGroup]="newSongForm" (submit)="saveSong()">
+        <label for="author">Author</label>
+        <input formControlName="author" id="author" class="form-control">
+        <label for="trackName">Song name</label>
+        <input formControlName="trackName" id="trackName" class="form-control">
+        <label for="genres">Genres</label>
+        <input formControlName="genres" id="genres" class="form-control">
+        <hr>
+        <button type="submit" class="btn btn-primary" [disabled]="newSongForm.invalid">Save song</button>
+    </form>
+</div>

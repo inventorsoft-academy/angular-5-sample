@@ -1,0 +1,14 @@
+<div class="container">
+    <div>Id: {{song?.id}}</div>
+    <div>Author: {{song?.author}}</div>
+    <div>Song name: {{song?.trackName}}</div>
+    <div>Content: {{song?.content || 'No content here'}}</div>
+    <div>Duration: {{song?.duration || 'Infinity'}}</div>
+    <div>Genres:
+        <ul>
+            <li *ngFor="let genre of song?.genres">
+                {{genre}}
+            </li>
+        </ul>
+    </div>
+</div>

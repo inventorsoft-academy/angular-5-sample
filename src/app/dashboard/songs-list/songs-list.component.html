@@ -1,0 +1,17 @@
+<h1>All songs</h1>
+<table class="table table-responsive">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Author</th>
+        <th>Track name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let song of songsList" (click)="showSongDetails(song.id)">
+        <td>{{song.id}}</td>
+        <td>{{song.author}}</td>
+        <td>{{song.trackName}}</td>
+    </tr>
+    </tbody>
+</table>
